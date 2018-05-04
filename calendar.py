@@ -1,9 +1,14 @@
 import pymysql
 
+DB_HOST = "localhost"
+DB_USERNAME = "root"
+DB_PASSWORD = ""
+DB_NAME = "fullcalendar"
+
 def get_events():
     '''Hämtar alla events från databasen'''
     # Anslut till databasen
-    db = pymysql.connect("localhost","root","","fullcalendar", cursorclass=pymysql.cursors.DictCursor)
+    db = pymysql.connect(DB_HOST,DB_USERNAME, DB_PASSWORD, DB_NAME, cursorclass=pymysql.cursors.DictCursor)
     # Skapa en pekare till databasen
     cursor = db.cursor()
     # Skicka frågan till databasen
@@ -17,7 +22,7 @@ def get_events():
 def save_event(title, start, end):
     '''Spara ett nytt event i databasen'''
     # Anslut till databasen
-    db = pymysql.connect("localhost","root","","fullcalendar", cursorclass=pymysql.cursors.DictCursor)
+    db = pymysql.connect(DB_HOST,DB_USERNAME, DB_PASSWORD, DB_NAME, cursorclass=pymysql.cursors.DictCursor)
     # Skapa en pekare till databasen
     cursor = db.cursor()
     # Skicka frågan till databasen
