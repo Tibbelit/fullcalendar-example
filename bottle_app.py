@@ -19,5 +19,4 @@ def events():
     event = calendar.create_event(title, start, end)
     return json.dumps(event)
 
-
 run(host='localhost', port=8080, reloader=True)
