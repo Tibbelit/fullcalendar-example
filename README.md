@@ -10,7 +10,7 @@ A simple implamentation of fullcalendar using bottle as server and mysql as data
 You will need the packages `pymysql` and `bottle`. Install it by following commands:
 ```bash
 pip install pymysql
-``
+```
 ```bash
 pip install bottle
 ```
