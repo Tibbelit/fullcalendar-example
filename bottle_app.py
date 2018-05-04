@@ -16,9 +16,8 @@ def events():
     title = request.forms.get("title")
     start = request.forms.get("start")
     end = request.forms.get("end")
-
-    events = calendar.save_event(title, start, end)
-    return json.dumps(events)
+    event = calendar.create_event(title, start, end)
+    return json.dumps(event)
 
 
 run(host='localhost', port=8080, reloader=True)
