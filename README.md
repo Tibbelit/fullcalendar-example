@@ -35,3 +35,5 @@ cd fullcalendar-example
 ```
 python bottle_app.py
 ```
+
+5. Open your favorite browser and navigate to `http://localhost:8080`
